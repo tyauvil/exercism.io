@@ -15,9 +15,8 @@ def verify(isbn):
         return False
     else:
         r = 0
-        x = 10
         for i in range(10):
-            r += (int(result[i])*x)
-            x -= 1
+            r += (int(result[i])*(10-i))
+
     
     return r%11 == 0
